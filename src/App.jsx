@@ -3,6 +3,7 @@ import { getMovieList } from "./api/api";
 import { searchMovie } from "./api/api";
 import { IoIosSearch } from "react-icons/io";
 import Loading from "./components/Loading";
+import Footer from "./components/Footer";
 
 const App = () => {
   const [movies, setMovies] = useState([]);
@@ -86,6 +87,7 @@ const App = () => {
           </div>
         )}
       </main>
+      <Footer />
     </>
   );
 };
