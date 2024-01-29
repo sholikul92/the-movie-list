@@ -11,20 +11,20 @@ const App = () => {
 
   const imageUrl = import.meta.env.VITE_BASEIMAGEURL;
 
-  const fetchMovies = async () => {
-    try {
-      setLoading(true);
-      const result = await getMovieList();
-      setMovies(result);
-    } catch (error) {
-      console.log(`Error fetching data: ${error}`);
-    } finally {
-      setLoading(false);
-    }
-  };
+  // const fetchMovies = async () => {
+  //   try {
+  //     setLoading(true);
+  //     const result = await getMovieList();
+  //     setMovies(result);
+  //   } catch (error) {
+  //     console.log(`Error fetching data: ${error}`);
+  //   } finally {
+  //     setLoading(false);
+  //   }
+  // };
 
   useEffect(() => {
-    fetchMovies();
+    getMovieList().then((result) => setMovies(result));
   }, []);
 
   const handleSearchMovie = async (event) => {
