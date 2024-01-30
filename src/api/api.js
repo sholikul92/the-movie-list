@@ -18,3 +18,10 @@ export const searchMovie = async (q) => {
 
   return movies.results;
 };
+
+export const getDetailsMovieList = async(id) => {
+  const response = await fetch(`${baseUrl}/movie/${id}?api_key=${apiKey}`)
+  const detailMovies = await response.json()
+  
+  return detailMovies;
+}
