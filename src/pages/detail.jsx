@@ -28,7 +28,7 @@ const DetailPage = () => {
           <div className="flex">
             <span className="mr-3">{movies.release_date}</span>
             <FaStar className="text-yellow-500 mt-1 mr-1" />
-            <span>{movies.popularity}</span>
+            <span>{(movies.vote_average).toFixed(1)}</span>
           </div>
           <div>
             {movies.genres?.map((genre) => (

@@ -5,7 +5,7 @@ import { CiGlobe } from "react-icons/ci";
 
 const Footer = () => {
   return (
-    <footer className="text-white text-center bottom-0">
+    <footer className="text-white text-center relative bottom-0">
       <div className="bg-[#032541] py-3">
         <p className="mb-3">Contact Us</p>
         <div className="flex gap-3 justify-center">

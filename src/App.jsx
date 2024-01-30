@@ -27,11 +27,11 @@ const App = () => {
   }, []);
 
   return (
-    <>
+    <div className="h-screen flex flex-col">
       <Header>
         <InputSearch setLoading={setLoading} setMovies={setMovies}/>
       </Header>
-      <main>
+      <main className="flex-1">
         {loading ? (
           <Loading />
         ) : (
@@ -42,7 +42,7 @@ const App = () => {
         )}
       </main>
       <Footer />
-    </>
+    </div>
   );
 };
 
